@@ -24,7 +24,7 @@ class _DecrementPageState extends State<DecrementPage> {
 
             children: [
               Consumer(builder: (context,counter,child){
-                return Text("Yourr Data:",style: TextStyle(color: Colors.white,fontSize: 32),);
+                return Text("Your Data:",style: TextStyle(color: Colors.white,fontSize: 32),);
 
               }),
               SizedBox(height: 10,),
