@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:provider_1/models/card.dart';
 import 'package:provider_1/pages/increment_page.dart';
+import 'package:provider_1/pages/productlist_page.dart';
 import 'package:provider_1/providers/counter_provider.dart';
 
 void main() {
-  runApp(ChangeNotifierProvider(create: (context) =>Counter(),
+  runApp(ChangeNotifierProvider(create: (context) =>Cart(),
   child: MyApp(),
   ));
 }
@@ -18,7 +20,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
 
       debugShowCheckedModeBanner: false,
-      home: IncrementPage(),
+      home: ProductlistPage(),
 
     );
   }
