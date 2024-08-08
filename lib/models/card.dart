@@ -5,7 +5,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:provider_1/models/product.dart';
 
-class Card with ChangeNotifier{
+class Cart with ChangeNotifier{
   Map<String, int> _items = {};
   Map<String,int> get items => _items;
 
@@ -29,6 +29,16 @@ class Card with ChangeNotifier{
   }
   int getItemCount(Product product) {
     return _items[product.id] ?? 0;
+  }
+  double get totalPrice {
+    double total = 0.0;
+    _items.forEach((productId, quantity) {
+      // This is a placeholder price calculation.
+      // You should fetch the product price from your product list.
+      double productPrice = 10.0; // Example price
+      total += productPrice * quantity;
+    });
+    return total;
   }
 
 }
